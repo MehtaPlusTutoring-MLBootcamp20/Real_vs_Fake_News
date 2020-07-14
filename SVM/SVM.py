@@ -23,7 +23,7 @@ for i in C_values:
   clf.fit(X_train, Y_train)
   print(i, clf.score(X_test, Y_test))
 
-kernels = ['linear', 'rbf', 'poly']
+kernels = ['linear', 'rbf', 'poly','sigmoid', 'precomputed']
 for kernel in kernels:
   svc = svm.SVC(kernel=kernel).fit(X_train, Y_train)
   print(kernel, clf.score(X_test, Y_test))
