@@ -22,3 +22,23 @@ for i in C_values:
   clf = svm.SVC(kernel = "linear", C=i)
   clf.fit(X_train, Y_train)
   print(i, clf.score(X_test, Y_test))
+
+kernels = ['linear', 'rbf', 'poly']
+for kernel in kernels:
+  svc = svm.SVC(kernel=kernel).fit(X_train, Y_train)
+  print(kernel, clf.score(X_test, Y_test))
+
+gammas = [0.1, 1, 10, 100]
+for gamma in gammas:
+  svc = svm.SVC(kernel='rbf', gamma=gamma).fit(X_train, Y_train)
+  print(gamma, clf.score(X_test, Y_test))
+
+cs = [0.1, 1, 10, 100, 1000]
+for c in cs:
+  svc = svm.SVC(kernel='rbf', C=c).fit(X_train, Y_train)
+  print(c, clf.score(X_test, Y_test))
+
+degrees = [0, 1, 2, 3, 4, 5, 6]
+for degree in degrees:
+  svc = svm.SVC(kernel='poly', degree=degree).fit(X_train, Y_train)
+  print(degree, clf.score(X_test, Y_test))
