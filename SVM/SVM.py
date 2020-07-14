@@ -15,7 +15,7 @@ clf = svm.SVC(kernel = #"linear"?) #SVM Model, default C-value
 clf.fit(X_train, Y_train)
 
 accuracy = clf.score(X_test, Y_test) #accuracy
-print("This is the accuracy " + accuracy)
+print("This is the accuracy ", accuracy)
 
 C_values = [0.001, 0.01, 0.1, 1] #test various C-values to determine which gives the best accuraccy
 for i in C_values:
