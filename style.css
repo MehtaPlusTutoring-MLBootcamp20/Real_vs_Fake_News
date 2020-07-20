@@ -3,9 +3,24 @@
   }
   
   body {
-    background-color: #F0F8FF;
+    background-color: #c4d5ee;
   }
   
   img {
     width: 50%;
+  }
+
+  p {
+    margin-right: 150px;
+    margin-left: 150px;
+  }
+
+  h3 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  h1 {
+    margin-top: 25px;
+    margin-bottom: 25px;
   }
